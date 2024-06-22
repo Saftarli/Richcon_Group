@@ -23,64 +23,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<div class="bg-top navbar-light">
-    <div class="container">
-        <div class="row no-gutters d-flex align-items-center align-items-stretch">
-            <div class="col-md-4 d-flex align-items-center py-4">
-                <a class="navbar-brand" href="index.html"><span class="flaticon-bee mr-1"></span>RCG</a>
-            </div>
-            <div class="col-lg-8 d-block">
-                <div class="row d-flex">
-                    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                        <div class="icon d-flex justify-content-center align-items-center"><span
-                                class="icon-paper-plane"></span></div>
-                        <div class="text d-flex align-items-center">
-                            <span>youremail@email.com</span>
-                        </div>
-                    </div>
-                    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                        <div class="icon d-flex justify-content-center align-items-center"><span
-                                class="icon-phone2"></span></div>
-                        <div class="text d-flex align-items-center">
-                            <span>Call Us: + 1235 2355 98</span>
-                        </div>
-                    </div>
-                    <div class="col-md topper d-flex align-items-center align-items-stretch">
-                        <p class="mb-0 d-flex d-block">
-                            <a href="#" class="btn btn-primary d-flex align-items-center justify-content-center">
-                                <span>Request A Quote</span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container d-flex align-items-center">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-        <form action="#" class="searchform order-lg-last">
-            <div class="form-group d-flex">
-                <input type="text" class="form-control pl-3" placeholder="Search">
-                <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span>
-                </button>
-            </div>
-        </form>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
-                <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="project.html" class="nav-link">Project</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{% include 'includes/head.html' %}
+{% include 'includes/navbar.html' %}
 <!-- END nav -->
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('{% get_media_prefix %}images/bg_1.jpg');"
@@ -149,19 +93,26 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0" style="background-image: url({% get_media_prefix %}images/bg_2.jpg);">
+            <div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0"
+                 style="background-image: url({% get_media_prefix %}images/bg_2.jpg);">
             </div>
             <div class="col-md-7 wrap-about py-5 px-4 px-md-5 ftco-animate">
                 <div class="heading-section mb-5">
-                    <h2 class="mb-4">We Are Highly Recommendable Construction Firm</h2>
+                    <h2 class="mb-4">Richcon Construction Group</h2>
                 </div>
                 <div class="">
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-                        would have been rewritten a thousand times and everything that was left from its origin would be
-                        the word. Far far away, behind the word mountains, far from the countries Vokalia and
-                        Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove.</p>
+                    <p>Richcon Group olaraq, Azərbaycanın tikinti sektorunda peşəkar mühəndis, usta və texniki
+                        heyətimizlə birlikdə təmir və tikinti xidmətləri göstərən bir şirkətik. Yeni yaranmağımıza
+                        baxmayaraq, komandamız tikinti sahəsində dərin biliklərə və 15 ildən artıq təcrübəyə malikdir.
+                        Bu, müştərilərimizə düzgün və dəqiq mühəndislik həlləri təqdim edə bilməyimizi təmin edir.
+                        Uğurla tamamladığımız layihələr bu iddiamızın ən bariz sübutudur.
+
+                        Məqsədimiz, tikinti zamanı müştərilərimizi ikinci xərclərdən qorumaq, bizə həvalə edilən işləri
+                        vaxtında və dəqiqliklə yerinə yetirərək uğurla təhvil verməkdir. Ulu öndərimiz mərhum Heydər
+                        Əliyevin başlatdığı quruculuq yolunu, hal-hazırda Ali Baş Komandanımız cənab İlham Əliyevin
+                        məharətlə davam etdirdiyi inkişaf yolunda davam etdirməkdən qürur duyur və bu yolda inamla
+                        çalışırıq.</p>
+                    
                 </div>
             </div>
         </div>
@@ -226,7 +177,8 @@
                                 <p class="name">Racky Henderson</p>
                                 <span class="position">Farmer</span>
                             </div>
-                            <div class="user-img" style="background-image: url({% get_media_prefix %}images/person_1.jpg)">
+                            <div class="user-img"
+                                 style="background-image: url({% get_media_prefix %}images/person_1.jpg)">
                             </div>
                         </div>
                     </div>
@@ -241,7 +193,8 @@
                                 <p class="name">Henry Dee</p>
                                 <span class="position">Businessman</span>
                             </div>
-                            <div class="user-img" style="background-image: url({% get_media_prefix %}images/person_2.jpg)">
+                            <div class="user-img"
+                                 style="background-image: url({% get_media_prefix %}images/person_2.jpg)">
                             </div>
                         </div>
                     </div>
@@ -256,7 +209,8 @@
                                 <p class="name">Mark Huff</p>
                                 <span class="position">Students</span>
                             </div>
-                            <div class="user-img" style="background-image: url({% get_media_prefix %}images/person_3.jpg)">
+                            <div class="user-img"
+                                 style="background-image: url({% get_media_prefix %}images/person_3.jpg)">
                             </div>
                         </div>
                     </div>
@@ -271,7 +225,8 @@
                                 <p class="name">Rodel Golez</p>
                                 <span class="position">Striper</span>
                             </div>
-                            <div class="user-img" style="background-image: url({% get_media_prefix %}images/person_4.jpg)">
+                            <div class="user-img"
+                                 style="background-image: url({% get_media_prefix %}images/person_4.jpg)">
                             </div>
                         </div>
                     </div>
@@ -286,7 +241,8 @@
                                 <p class="name">Ken Bosh</p>
                                 <span class="position">Manager</span>
                             </div>
-                            <div class="user-img" style="background-image: url({% get_media_prefix %}images/person_1.jpg)">
+                            <div class="user-img"
+                                 style="background-image: url({% get_media_prefix %}images/person_1.jpg)">
                             </div>
                         </div>
                     </div>
@@ -297,7 +253,8 @@
 </section>
 
 
-<section class="ftco-intro" style="background-image: url({% get_media_prefix %}images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+<section class="ftco-intro" style="background-image: url({% get_media_prefix %}images/bg_3.jpg);"
+         data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row justify-content-center">
@@ -324,7 +281,8 @@
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="staff">
                     <div class="img-wrap d-flex align-items-stretch">
-                        <div class="img align-self-stretch" style="background-image: url({% get_media_prefix %}images/team-1.jpg);"></div>
+                        <div class="img align-self-stretch"
+                             style="background-image: url({% get_media_prefix %}images/team-1.jpg);"></div>
                     </div>
                     <div class="text pt-3 text-center">
                         <h3>Daren Wilson</h3>
@@ -344,7 +302,8 @@
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="staff">
                     <div class="img-wrap d-flex align-items-stretch">
-                        <div class="img align-self-stretch" style="background-image: url({% get_media_prefix %}images/team-2.jpg);"></div>
+                        <div class="img align-self-stretch"
+                             style="background-image: url({% get_media_prefix %}images/team-2.jpg);"></div>
                     </div>
                     <div class="text pt-3 text-center">
                         <h3>Warren Parker</h3>
@@ -364,7 +323,8 @@
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="staff">
                     <div class="img-wrap d-flex align-items-stretch">
-                        <div class="img align-self-stretch" style="background-image: url({% get_media_prefix %}images/team-3.jpg);"></div>
+                        <div class="img align-self-stretch"
+                             style="background-image: url({% get_media_prefix %}images/team-3.jpg);"></div>
                     </div>
                     <div class="text pt-3 text-center">
                         <h3>Eva Gustavo</h3>
@@ -384,7 +344,8 @@
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="staff">
                     <div class="img-wrap d-flex align-items-stretch">
-                        <div class="img align-self-stretch" style="background-image: url({% get_media_prefix %}images/team-4.jpg);"></div>
+                        <div class="img align-self-stretch"
+                             style="background-image: url({% get_media_prefix %}images/team-4.jpg);"></div>
                     </div>
                     <div class="text pt-3 text-center">
                         <h3>Mike Henderson</h3>
@@ -438,7 +399,8 @@
                 <div class="ftco-footer-widget mb-5">
                     <h2 class="ftco-heading-2">Recent Blog</h2>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url({% get_media_prefix %}images/image_1.jpg);"></a>
+                        <a class="blog-img mr-4"
+                           style="background-image: url({% get_media_prefix %}images/image_1.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                             <div class="meta">
@@ -449,7 +411,8 @@
                         </div>
                     </div>
                     <div class="block-21 mb-5 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url({% get_media_prefix %}images/image_2.jpg);"></a>
+                        <a class="blog-img mr-4"
+                           style="background-image: url({% get_media_prefix %}images/image_2.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                             <div class="meta">
