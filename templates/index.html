@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+{#    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">#}
+{#    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">#}
 
     {% include 'includes/css.html' %}
 </head>
@@ -58,12 +58,13 @@
                         <span class="subheading">Be Part of our Business</span>
                         <h3>Request A Quote</h3>
                     </div>
-                    <form action="#" class="request-form ftco-animate">
+                    <form method="post" class="request-form ftco-animate">
+                        {% csrf_token %}
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name">
+                            {{ form.first_name }}
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Last Name">
+                            {{ form.last_name }}
                         </div>
                         <div class="form-group">
                             <div class="form-field">
@@ -81,7 +82,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone">
+                            {{ form.phone }}
                         </div>
                         <div class="form-group">
                             <textarea name="" id="" cols="30" rows="2" class="form-control"

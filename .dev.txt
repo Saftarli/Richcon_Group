@@ -1,0 +1,11 @@
+
+IPv4	5.75.164.196
+IPv6	2a01:4f8:1c1b:7346::/64
+User	root
+Password	127MwEFJh9PHXbAcRWtK37
+
+ssh root@5.75.164.196
+pass: 127MwEFJh9PHXbAcRWtK37
+
+Login: Admin_saftarli
+Pass: django-insecure-$z)w(92!g&@+ib=iuc59m2ci!8@&r4_#ec*16559k3#(^ztr_b
